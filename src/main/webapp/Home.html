@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<style>
+	body{
+		background-image: url('https://cdn.wallpapersafari.com/30/77/ThGgxw.png');
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgba(255, 255, 255, 0.8);
+		align-items: center;
+		text-align: center;
+		
+	}
+	
+	
+	body::before{
+		background-image: inherit;
+		filter: blur(2px);
+	}
+	.container {
+      margin-top: 70px;
+      text-align: center;
+      
+      color: #ffffff; /* Set the text color to white to ensure visibility on the transparent background */
+    }
+    .app-title {
+      color: rgb(255, 255, 255);
+      font-size: 56px;
+      font-weight: bold;
+    }
+    .links {
+     
+      padding: 60px;
+      padding-bottom: 30px;
+      
+      
+      border-radius: 10px;
+      
+    }
+    .links a {
+      margin: 25px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .links a:hover {
+      background-color: rgb(192, 192, 192);
+      color: #fff;
+    }
+	
+</style>
+</head>
+<body>
+	<center>
+		<div class="container">
+			<h1 class="app-title">Welcome to the Course Management</h1><br><br>
+			<div class="links">
+	<a href="Admin.html">Admin</a><br><br><br>
+	<a href="Professor.html">Professor</a><br><br><br>
+	<a href="Student.html">Student</a>
+	</div>
+	</div>
+	</center>
+</body>
+</html>

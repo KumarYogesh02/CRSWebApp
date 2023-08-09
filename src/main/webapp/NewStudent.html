@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Student</title>
+<style>
+	@charset "ISO-8859-1";
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+   
+}
+body{
+		
+      background-image: url('');
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgba(255, 255, 255, 0.8);
+    
+	}
+
+body{
+	font-family: Arial, sans-serif;
+
+    background-color:rgb(255, 255, 255);
+justify-content: center;
+    align-items: center;
+}
+
+
+label {
+    font-weight: bold;
+    
+    display: block;
+    margin-bottom: 5px;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cont-login{
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container{
+
+    
+    max-width: 450px;
+
+    width: 45%;
+
+    background:rgb(255, 255, 255);
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    
+
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(64, 0, 64);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(64, 0, 64);
+  border-radius: 4px;
+}
+
+.link a {
+  
+      background-color:rgb(0, 0, 255) ;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      display: inline-block;
+      width: 200px;
+      table-layout: fixed;
+      border: 2px solid rgb(128, 0, 255);
+      border-radius: 3px;
+      padding: 10px 20px;
+      margin: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(64, 0, 64);
+  border-radius: 4px;
+}  
+input[type="submit"] {
+  background-color: rgb(128, 128, 255);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+</style>
+</head>
+<body>
+	<center>
+		<section class="container">
+			<h2>New Student Request</h2><br>
+	<form action="NewStudent" method="post">
+		
+		<label>Name          </label><input type="text"     name="name"><br><br>
+		<label>Age            </label><input type="text"     name="age"><br><br>
+		<label>Email          </label><input type="text"     name="email"><br><br>
+		<label>Course ID      </label><input type="text"     name="cid"><br><br>
+		<label>Course Name    </label><input type="text"     name="cname"><br><br>
+		<label>User Name      </label><input type="text"     name="uname"><br><br>
+		<label>Description    </label><input type="text"     name="desc"><br><br>
+		<input type="submit">
+		</form>
+		</center>
+	</section>
+</body>
+</html>
