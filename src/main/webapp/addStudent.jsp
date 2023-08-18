@@ -16,7 +16,7 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background-image:
-		url("/MVCBankApp/images/BankApp1.png");
+		url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
 	background-size: cover;
 	background-position: center;
 }

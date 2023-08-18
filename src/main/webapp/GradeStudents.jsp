@@ -15,7 +15,7 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background-image:
-		url("/MVCBankApp/images/BankApp1.png");
+		url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");
 	background-size: cover;
 	background-position: center;
 }
@@ -101,7 +101,7 @@ tr.red {
 </head>
 <body>
 <%
-	session = request.getSession();
+	
     Student s = new Student();
     HttpSession curSession = request.getSession();
     String u = (String) curSession.getAttribute("puname");

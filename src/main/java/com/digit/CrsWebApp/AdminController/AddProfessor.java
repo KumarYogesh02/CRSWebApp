@@ -20,7 +20,7 @@ public class AddProfessor extends HttpServlet{
 		boolean b = p.addProf(uname);
 		boolean b1 = p.remProfReq(uname);
 				
-        if(b==true && b1==true) {
+        if(b==true && b1==true) {//if data is present in professor request so go to adminsuccess
         	resp.sendRedirect("/CRSWebApp/AdminSuccess.html");
         }
         else {

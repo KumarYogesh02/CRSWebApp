@@ -1,154 +1,140 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" import="com.digit.CrsWebApp.model.Student"%>
+    pageEncoding="ISO-8859-1" import="com.digit.CrsWebApp.model.Student"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
-@charset "ISO-8859-1";
-*{
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-   
-}
-
-body{
-		
-      background-image: url('');
-      
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-color: rgb(197, 194, 188);
-    
-	}
-body{
+body {
 	font-family: Arial, sans-serif;
-
-    background-color:rgb(231, 230, 226);
-justify-content: center;
-    align-items: center;
-    
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-image:
+		url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+	background-size: cover;
+	background-position: center;
 }
-
-
-label {
-    font-weight: bold;
-    
-    display: block;
-    margin-bottom: 5px;
+body::before {
+			content: "";
+			background-image: inherit;
+			background-size: cover;
+			background-repeat: no-repeat;
+			filter: blur(2px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+.container {
+	max-width: 900px;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
-form {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.cont-login{
-	 display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    filter: blur('2px');
-}
-
-h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.container{
-
-    
-    max-width: 700px;
-
-    width: 105%;
-
-    background:rgb(255, 255, 255);
-
-    padding: 25px;
-
-    border-radius: 10px;
-
-    
-
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid rgb(64, 0, 64);
+input[type="submit"]{
+align-self: center;
+	display: flex;
+	align-items: center;
+	display: inline-block;
+	
+  text-decoration: none;
+  padding: 10px 20px; 
   border-radius: 4px;
-}
-
-input[type="submit"] {
-  background-color: rgb(128, 128, 255);
+  background-color: #007BFF;
   color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-p{
-align-items:center;
+  margin-bottom: 10px;
+  justify-content: center;
+    text-align: center;
 }
 
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
 
+th, td {
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
 
-  </style>
+th {
+	background-color: #3366cc;
+	color: #fff;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+a {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	color: #3366cc;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #005580;
+}
+
+tr.green {
+	background-color: #c8e6c9;
+}
+
+tr.red {
+	background-color: #ffcdd2;
+}
+</style>
 </head>
 <body>
-<center>
-		<div class="cont-login">
-	<%
-	session = request.getSession();
-	Student s = (Student) session.getAttribute("markscard");
+<%
+session = request.getSession();
+Student s = (Student) session.getAttribute("markscard");
 	%>
-	<h3 class="app-title">Marks Card:</h3>
-	<p>
-		ID:
-		<%=s.getSid()%></p>
-	<p>
-		Name:
-		<%=s.getSname()%></p>
-	<p>
-		User Name:
-		<%=s.getUser_name()%></p>
-	<p>
-		Age:
-		<%=s.getAge()%></p>
-	<p>
-		Email:
-		<%=s.getEmail()%></p>
-	<p>
-		Course ID:
-		<%=s.getCid()%></p>
-	<p>
-		Course:
-		<%=s.getCourse()%></p>
-	<p>
-		Score:
-		<%=s.getScore()%></p>
-</div>
-</center>
+	<center>
+	<div class="container">
+	
+	<h1 align="center">Marks Card:</h1>
+		<br>
+		<table border="1">
+			<tr>
+		
+			<th>Student Name</th>
+			<th>Student Username</th>
+			<th>Student Age</th>
+			<th>Student Email</th>
+			<th>Course id</th>
+			<th>Course name</th>
+			<th>Score</th>
+			</tr>
+		
+			<tr>
+		
+			<td><%=s.getSname()%></td>
+			<td><%=s.getUser_name()%></td>
+			<td><%=s.getAge()%></td>
+			<td><%=s.getEmail()%></td>
+			<td><%=s.getCid()%></td>
+			<td><%=s.getCourse()%></td>
+			<td><%=s.getScore()%></td>
+			</tr>
+			
+
+		</table>
+		</center>
+		</div>
 </body>
 </html>

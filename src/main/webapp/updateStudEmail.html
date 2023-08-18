@@ -18,7 +18,7 @@
 
 body{
 		
-      background-image: url('');
+      background-image: url('https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000');
       
       background-size: cover;
       background-position: center;
@@ -56,11 +56,12 @@ form {
 	 display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 300px;
     filter: blur('2px');
 }
 
 h3 {
+	margin-top: 100px;
     text-align: center;
     font-size: 24px;
     margin-bottom: 10px;
@@ -114,8 +115,9 @@ input[type="submit"] {
 </head>
 <body>
 	<center>
+		<h3 class="app-title">Update Email</h3><br><br><br>
 		<div  class="cont-login">
-			<h3 class="app-title">Update Email</h3><br><br><br>
+			
 	<form action="updateEmail" method="post">       
 			<label>New Email</label> <input type="text" name="nm" required> <br><br><br>
             <input type="submit" value="Update Email">
